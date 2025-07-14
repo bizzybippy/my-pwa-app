@@ -1,4 +1,5 @@
 import PostCard from '@/app/components/PostCard';
+
 import { Post } from './types/post';
 
 async function fetchPosts(): Promise<Post[]> {
