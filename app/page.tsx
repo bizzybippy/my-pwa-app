@@ -20,6 +20,9 @@ export default async function Home() {
 
   return (
     <div className="container mx-auto p-4">
+      <div className="p-3 mb-4 text-green-300 border border-black bg-gray-500 rounded-lg">
+        <p>Version: {APP_VERSION}</p>
+      </div>
       {posts.length === 0 ? (
         <p>ไม่มีโพสต์ให้แสดง</p>
       ) : (
@@ -29,9 +32,6 @@ export default async function Home() {
           ))}
         </div>
       )}
-      <div className="p-3 text-green-300 border border-black bg-gray-500 rounded-lg">
-        Version: {APP_VERSION}
-      </div>
     </div>
   );
 }
