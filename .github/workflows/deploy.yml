@@ -2,7 +2,9 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [main]
+    branches: [release]
+    tags:
+      - 'v*'  # ใช้เฉพาะ tag ที่ขึ้นต้นด้วย v เช่น v1.0.0
 
 permissions:
   contents: write
@@ -10,11 +12,12 @@ permissions:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    if: startsWith(github.ref, 'refs/tags/v') && github.ref_name == 'release'
     steps:
       - uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          ref: ${{ github.ref_name }}
+          ref: ${{ github.ref }}
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
