@@ -3,7 +3,7 @@ import { Post } from './types/post';
 
 async function fetchPosts(): Promise<Post[]> {
   try {
-    const response = await fetch('https://jsonplaceholder.typicode.com/posts', {
+          const response = await fetch('https://jsonplaceholder.typicode.com/posts', {
       cache: 'force-cache', // แคชการตอบสนองเพื่อ SSG
     });
     return response.json();
