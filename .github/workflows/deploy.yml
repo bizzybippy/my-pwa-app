@@ -38,6 +38,7 @@ jobs:
           git config --global user.email 'action@github.com'
           git add . ':!./.github/workflows/*'
           git diff --cached --quiet || git commit -m "Apply Prettier formatting"
+          git add . ':!./.github/workflows/*'
           git pull origin main --rebase || exit 1
           git push origin HEAD:main
         env:
