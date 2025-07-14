@@ -38,9 +38,10 @@ jobs:
           git config --global user.email 'action@github.com'
           git add . ':!./.github/workflows/*'
           git commit -m "Apply Prettier formatting" || echo "No changes to commit"
-          git push
+          git push origin HEAD:main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      
       
 
       - name: Build
