@@ -48,7 +48,7 @@ const config = [
       ...prettierConfig.rules,
       'react/prop-types': 'off',
       '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }],
-      // 'no-console': ['warn', { allow: ['warn', 'error'] }],
+      'no-console': ['warn', { allow: ['warn', 'error'] }],
       'import/order': [
         'warn',
         {
