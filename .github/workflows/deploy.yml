@@ -7,7 +7,7 @@ on:
     branches: [main]
 
 permissions:
-  contents: write
+  contents: write 
 
 jobs:
   build-and-deploy:
@@ -16,8 +16,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          fetch-depth: 0  
+          token: ${{ secrets.GITHUB_TOKEN }} 
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -37,11 +36,12 @@ jobs:
         run: |
           git config --global user.name 'GitHub Action'
           git config --global user.email 'action@github.com'
-          git add .
+          git add . ':!./.github/workflows/*'
           git commit -m "Apply Prettier formatting" || echo "No changes to commit"
-          git push origin main
+          git push
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      
 
       - name: Build
         env:
