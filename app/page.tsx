@@ -1,6 +1,7 @@
 import PostCard from '@/app/components/PostCard';
 
 import { Post } from './types/post';
+import { APP_VERSION } from './version';
 
 async function fetchPosts(): Promise<Post[]> {
   try {
@@ -28,6 +29,9 @@ export default async function Home() {
           ))}
         </div>
       )}
+      <div className="p-3 text-green-300 border border-black bg-gray-500 rounded-lg">
+        Version: {APP_VERSION}
+      </div>
     </div>
   );
 }

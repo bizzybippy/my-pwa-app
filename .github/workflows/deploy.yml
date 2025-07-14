@@ -27,6 +27,10 @@ jobs:
       - name: Install Dependencies
         run: npm ci
 
+      - name: Write Git tag to app/version.ts
+        run: |
+          echo "export const APP_VERSION = '${{ github.ref_name }}';" > app/version.ts
+
       - name: Build
         env:
           BASE_PATH: /my-pwa-app

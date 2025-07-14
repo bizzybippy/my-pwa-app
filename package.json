@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "set-version": "ts-node lib/set-version.ts",
+    "build": "npm run set-version && next build",
     "start": "next start",
     "lint": "eslint \"**/*.{ts,tsx}\" --fix",
     "test": "vitest run",
