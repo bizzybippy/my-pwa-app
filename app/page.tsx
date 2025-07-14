@@ -22,7 +22,7 @@ export default async function Home() {
         <p>ไม่มีโพสต์ให้แสดง</p>
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {posts.map((post) => (
+          {posts.map(post => (
             <PostCard key={post.id} title={post.title} body={post.body} />
           ))}
         </div>

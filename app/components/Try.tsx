@@ -1,9 +1,5 @@
 export default function Try() {
-    const x = { a : 1234}
+  const x = { a: 1234 };
 
-
-    
-        return (
-                                <div>try {x.a}</div>
-        );
-    }
+  return <div>try {x.a}</div>;
+}
