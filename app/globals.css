@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+:root {
+  --primary: 220 100% 50%;
+  --secondary: 260 100% 50%;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary: 220 100% 60%;
+    --secondary: 260 100% 60%;
+  }
+}
+
