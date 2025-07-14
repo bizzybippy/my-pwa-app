@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 :root {
   --primary: 220 100% 50%;
@@ -11,4 +11,3 @@
     --secondary: 260 100% 60%;
   }
 }
-

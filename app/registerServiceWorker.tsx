@@ -8,10 +8,10 @@ export default function RegisterServiceWorker() {
       window.addEventListener('load', () => {
         navigator.serviceWorker
           .register('/my-pwa-app/sw.js')
-          .then((registration) => {
+          .then(registration => {
             console.log('Service Worker registered:', registration);
           })
-          .catch((error) => {
+          .catch(error => {
             console.error('Service Worker registration failed:', error);
           });
       });

@@ -1,12 +1,12 @@
-import type { Config } from "tailwindcss";
+import type { Config } from 'tailwindcss';
 
 export default {
-  content: ["./app/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
+  content: ['./app/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
       colors: {
-        primary: "hsl(var(--primary) / <alpha-value>)",
-        secondary: "hsl(var(--secondary) / <alpha-value>)",
+        primary: 'hsl(var(--primary) / <alpha-value>)',
+        secondary: 'hsl(var(--secondary) / <alpha-value>)',
       },
     },
   },
